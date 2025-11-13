@@ -1,0 +1,78 @@
+/* Tipografías */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Portada */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url('img/hero.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 100%);
+}
+
+/* Biografía */
+.section {
+    padding: 40px 30px;
+}
+
+.section h2 {
+    font-size: 38px;
+    color: #ff2a2a;
+    letter-spacing: 2px;
+}
+
+.section p {
+    font-size: 20px;
+    line-height: 1.4;
+    opacity: 0.88;
+}
+
+/* Lista de géneros */
+.genres {
+    margin-top: 20px;
+}
+
+.genre-item {
+    background: linear-gradient(90deg, #3a0000, #ff0000);
+    padding: 12px;
+    margin: 6px 0;
+    border-radius: 4px;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+/* Botón SoundCloud */
+.soundcloud-btn {
+    display: block;
+    margin: 40px auto;
+    width: fit-content;
+    padding: 12px 30px;
+    border: 2px solid #ff2a2a;
+    color: #ff2a2a;
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.soundcloud-btn:hover {
+    background: #ff2a2a;
+    color: #000;
+}
