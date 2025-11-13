@@ -1,115 +1,188 @@
-/* Tipografías */
+/* FUENTE */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    background: #000;
-    font-family: 'Bebas Neue', sans-serif;
-    color: #fff;
-    overflow-x: hidden;
+  background: #000;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-/* Portada */
-.hero {
-    width: 100%;
-    height: 100vh;
-    background: url('img/hero.jpg') center/cover no-repeat;
-    position: relative;
+/* TITULOS */
+h1, h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 100%);
-}
-
-/* Biografía */
+/* SECCIONES GENERALES */
 .section {
-    padding: 40px 30px;
+  padding: 32px 20px;
 }
 
-.section h2 {
-    font-size: 38px;
-    color: #ff2a2a;
-    letter-spacing: 2px;
+/* HERO SOLO PARA TELÉFONO */
+.hero-mobile {
+  position: relative;
+  width: 100%;
+  height: 65vh;              /* <--- más bajo para que bio quede cerca */
+  background: url('hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
 }
 
-.section p {
-    font-size: 20px;
-    line-height: 1.4;
-    opacity: 0.88;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, #000 85%);
 }
 
-/* Lista de géneros */
+.hero-content {
+  position: relative;
+}
+
+.hero-title {
+  font-size: 30px;
+}
+
+.hero-subtitle {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  margin-top: 4px;
+}
+
+/* BIOGRAFÍA */
+.section-bio {
+  padding-top: 16px;
+}
+
+.section-bio h2 {
+  font-size: 28px;
+  color: #ff2a2a;
+  margin-bottom: 12px;
+}
+
+.section-bio p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* ESTILOS MUSICALES */
+.section-genres h2 {
+  font-size: 28px;
+  color: #ff2a2a;
+  margin-bottom: 12px;
+}
+
 .genres {
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
 }
 
 .genre-item {
-    background: linear-gradient(90deg, #3a0000, #ff0000);
-    padding: 12px;
-    margin: 6px 0;
-    border-radius: 4px;
-    font-size: 22px;
-    text-transform: uppercase;
+  background: linear-gradient(90deg, #3a0000, #ff0000);
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 15px;
 }
 
-/* Botón SoundCloud */
+/* SOUNDCLOUD */
+.section-soundcloud {
+  text-align: center;
+}
+
+.section-soundcloud h2 {
+  font-size: 28px;
+  color: #ff2a2a;
+  margin-bottom: 8px;
+}
+
+.sc-text {
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
 .soundcloud-btn {
-    display: block;
-    margin: 40px auto;
-    width: fit-content;
-    padding: 12px 30px;
-    border: 2px solid #ff2a2a;
-    color: #ff2a2a;
-    text-decoration: none;
-    font-size: 24px;
-    letter-spacing: 1px;
-    transition: 0.3s;
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: 2px solid #ff2a2a;
+  color: #ff2a2a;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: 0.25s;
 }
 
 .soundcloud-btn:hover {
-    background: #ff2a2a;
-    color: #000;
+  background: #ff2a2a;
+  color: #000;
 }
 
-/* ELIMINA ESPACIO NEGRO ENTRE SECCIONES */
-section {
-    margin: 0;
-    padding: 0;
+/* NOMBRE + FOTO SOLO ESCRITORIO */
+.section-hero-desktop {
+  display: none;          /* oculto en teléfono */
+  padding-top: 0;
+  padding-bottom: 40px;
 }
 
-/* Asegura que la biografía empiece pegada */
-#bio {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+.hero-desktop-wrapper {
+  display: flex;
+  gap: 24px;
+  align-items: center;
 }
 
-/* Ajuste para móviles */
-@media (max-width: 768px) {
-    .hero {
-        margin-bottom: 0 !important;
-        padding-bottom: 0 !important;
-    }
-
-    #bio {
-        margin-top: 0 !important;
-    }
+.hero-desktop-image {
+  width: 45%;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
-/* Ajuste para pantallas grandes */
-@media (min-width: 1024px) {
-    .hero-wrapper {
-        display: flex;
-        align-items: flex-end;
-        margin-bottom: 0 !important;
-    }
+.hero-desktop-text h1 {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
 
-    #bio {
-        margin-top: 20px !important;
-    }
+.hero-desktop-text p {
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #dddddd;
+}
+
+/* ----------- RESPONSIVE ESCRITORIO ----------- */
+
+@media (min-width: 768px) {
+
+  /* en PC NO queremos hero arriba */
+  .hero-mobile {
+    display: none;
+  }
+
+  .section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-inline: 40px;
+  }
+
+  .section-bio {
+    padding-top: 40px;
+  }
+
+  .genres {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .section-hero-desktop {
+    display: block;      /* solo en escritorio */
+  }
 }
