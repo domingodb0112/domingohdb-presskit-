@@ -76,3 +76,40 @@ body {
     background: #ff2a2a;
     color: #000;
 }
+
+/* ELIMINA ESPACIO NEGRO ENTRE SECCIONES */
+section {
+    margin: 0;
+    padding: 0;
+}
+
+/* Asegura que la biografía empiece pegada */
+#bio {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .hero {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    #bio {
+        margin-top: 0 !important;
+    }
+}
+
+/* Ajuste para pantallas grandes */
+@media (min-width: 1024px) {
+    .hero-wrapper {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 0 !important;
+    }
+
+    #bio {
+        margin-top: 20px !important;
+    }
+}
