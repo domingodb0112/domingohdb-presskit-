@@ -9,29 +9,36 @@
 
 <body>
 
-    <!-- Portada -->
-    <div class="hero"></div>
+    <!-- HERO SOLO PARA TELÉFONOS -->
+    <header class="hero hero-mobile">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">DOMINGOH DB</h1>
+            <p class="hero-subtitle">Techno · Hypnotic · Hard · Minimal · Industrial · Acid</p>
+        </div>
+    </header>
 
-    <!-- Biografía -->
-    <section class="section">
+    <!-- BIOGRAFÍA -->
+    <section class="section section-bio">
         <h2>Biografía</h2>
         <p>
-            DomingoH DB es un explorador sonoro dentro del house, techno, hypnotic y hard techno,
+            Domingoh DB es un explorador sonoro dentro del house, techno, hypnotic y hard techno,
             construyendo paisajes que se mueven entre la oscuridad, el pulso tribal y una intensidad
             cuidadosamente modulada. Sus sets funcionan como un viaje introspectivo: transiciones
             precisas, energía que se transforma y una narrativa que guía al público a través de
-            texturas profundas y envolventes.  
+            texturas profundas y envolventes.
+        </p>
+        <p>
             Complementa su propuesta con visuales generativos creados por él mismo en JavaScript:
             obras vivas que reaccionan en tiempo real y expanden la experiencia hacia un territorio
-            más inmersivo.  
-            Ha formado parte de raves independientes, eventos privados y fiestas locales, llevando
-            una identidad donde la música, la tecnología y la sensibilidad artística confluyen para
-            provocar un estado casi ritual en la pista.
+            más inmersivo. Ha formado parte de raves independientes, eventos privados y fiestas
+            locales, llevando una identidad donde la música, la tecnología y la sensibilidad
+            artística confluyen para provocar un estado casi ritual en la pista.
         </p>
     </section>
 
-    <!-- Estilos musicales -->
-    <section class="section">
+    <!-- ESTILOS MUSICALES -->
+    <section class="section section-genres">
         <h2>Estilo Musical</h2>
 
         <div class="genres">
@@ -44,12 +51,31 @@
         </div>
     </section>
 
-    <!-- SoundCloud -->
-    <a href="https://soundcloud.com/databasedb" 
-       class="soundcloud-btn" 
-       target="_blank">
-       Escuchar en SoundCloud
-    </a>
+    <!-- SOUNDCloud -->
+    <section class="section section-soundcloud">
+        <h2>Música</h2>
+        <p class="sc-text">
+            Selección de sets y mezclas disponibles en SoundCloud.
+        </p>
+
+        <a href="https://soundcloud.com/databasedb"
+           class="soundcloud-btn"
+           target="_blank"
+           rel="noopener">
+            Escuchar en SoundCloud
+        </a>
+    </section>
+
+    <!-- NOMBRE + FOTO SOLO PARA COMPUTADORA -->
+    <section class="section section-hero-desktop">
+        <div class="hero-desktop-wrapper">
+            <img src="hero.jpg" alt="Domingoh DB en vivo" class="hero-desktop-image">
+            <div class="hero-desktop-text">
+                <h1>DOMINGOH DB</h1>
+                <p>Techno · Hypnotic · Hard · Minimal · Industrial · Acid</p>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
