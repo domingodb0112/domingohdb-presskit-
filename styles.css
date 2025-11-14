@@ -186,5 +186,74 @@ h1, h2 {
 
   .section-hero-desktop {
     display: block;      /* solo en escritorio */
-  }
+  }  
 }
+
+/* -------- MODAL VISUALES -------- */
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #111;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 950px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  border: 1px solid #ff2a2a;
+}
+
+.modal-content h2 {
+  text-align: center;
+  color: #ff2a2a;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+.poetic-text {
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.visuales-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.visuales-grid img {
+  width: 100%;
+  border-radius: 6px;
+  border: 2px solid #ff2a2a;
+}
+
+/* cerrar */
+.close {
+  float: right;
+  font-size: 32px;
+  color: #ff2a2a;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+
