@@ -96,5 +96,47 @@
     </div>
   </section>
 
+  <!-- ventana emergente de visuales -->
+<div id="visualesModal" class="modal">
+  <div class="modal-content">
+
+    <span class="close" onclick="closeVisuales()">&times;</span>
+
+    <h2>Visuales Generativos · Live Coding</h2>
+
+    <p class="poetic-text">
+      El live coding es un ritual donde el código respira, vibra y se transforma en luz.
+      Cada línea que escribo no es sólo una instrucción: es un impulso vital que nace,
+      se distorsiona, muta, fluye con el beat y se expande como un organismo luminoso.
+      Mis visuales no existen antes del momento…  
+      Nacen contigo, con tu energía, con el sonido que atraviesa la piel.  
+      Son la traducción espiritual entre la máquina y el instinto:  
+      un puente donde mi arte se convierte en pulso vivo.
+    </p>
+
+    <div class="visuales-grid">
+      <img src="vis1.png">
+      <img src="vis2.png">
+      <img src="vis3.png">
+      <img src="vis4.png">
+      <img src="vis5.png">
+    </div>
+
+  </div>
+</div>
+
+   <!-- aquí termina tu modal -->
+</div>
+
+<script>
+  function openVisuales() {
+    document.getElementById("visualesModal").style.display = "block";
+  }
+
+  function closeVisuales() {
+    document.getElementById("visualesModal").style.display = "none";
+  }
+</script>
+  
 </body>
 </html>
